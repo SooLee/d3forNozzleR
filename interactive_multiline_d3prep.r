@@ -39,7 +39,7 @@ create_d3_js_for_interactive_multiline_plot <- function(
    
    # tags for html to call js file  
    html_script_tag = paste("<script src=\"", js_file, "\"></script>",sep="")   # relative to report dir
-   html_common_script_tag = "<script src=\"https://d3js.org/d3.v3.js\"></script><script src=\"https://github.com/SooLee/d3forNozzleR/blob/master/interactive_multiline.js\"></script>"
+   html_common_script_tag = "<script src=\"https://d3js.org/d3.v3.js\"></script><script src=\"https://raw.githubusercontent.com/SooLee/d3forNozzleR/master/interactive_multiline.js\"></script>"
    html_div_tag = paste("<div id=\"", div_id, "\"></div>",sep="")  
   
    # return necessary things to create an html component
