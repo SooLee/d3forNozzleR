@@ -9,6 +9,7 @@ create_d3_js_for_interactive_multiline_plot <- function(
     xlab = 'x',
     ylab = 'y',
     report_dir = "report",  ## output directory that will contain html, js, tsv etc.
+    js_file_prefix = 'interactive_multiline',
 
     # tsvfile relative path ( to be used inside js file)
     tsvfile = "sample_tsvfile.tsv", # relative to report dir
@@ -33,7 +34,7 @@ create_d3_js_for_interactive_multiline_plot <- function(
       paste( "interactive_multiline_plot('", tsvfile, "', tsvcolumns, ", xmin, ",", xmax, ",", ymin, ",", ymax ,", '", xlab, "', '", ylab, "', '", div_id , "');", sep=""),
       "});"
     )
-    js_file = paste("./distanceplot_perchr.", sample_name, ".js", sep="") # relative to report dir  (to be used in html)
+    js_file = paste("./", js_file_prefix, ".", sample_name, ".js", sep="") # relative to report dir  (to be used in html)
     js_file_curr = paste(report_dir, "/distanceplot_perchr.", sample_name, ".js", sep="") # relative to current dir
     write.table(js_content, js_file_curr,quote=FALSE, row.names=FALSE, col.names=FALSE)
    
