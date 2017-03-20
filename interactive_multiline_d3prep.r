@@ -15,7 +15,7 @@ create_d3_js_for_interactive_multiline_plot <- function(
     tsvfile = "sample_tsvfile.tsv", # relative to report dir
     
     # data frame for column pairs, colors (on and off) and labels.
-    tsvcoldata = read.table("sample_tsvcolfile.tsv", comment.char="", sep="\t", header=T, stringsAsFactors=FALSE)
+    tsvcoldata = read.table("sample/sample_tsvcolfile.tsv", comment.char="", sep="\t", header=T, stringsAsFactors=FALSE)
 ){
 
     # The function assumes a directory structure of a report_dir which contains all necessary html, js and tsv.
@@ -42,9 +42,12 @@ create_d3_js_for_interactive_multiline_plot <- function(
    html_script_tag = paste("<script src=\"", js_file, "\"></script>",sep="")   # relative to report dir
    html_common_script_tag = "<script src=\"https://d3js.org/d3.v3.js\"></script><script src=\"https://raw.githubusercontent.com/SooLee/d3forNozzleR/master/interactive_multiline.js\"></script>"
    html_div_tag = paste("<div id=\"", div_id, "\"></div>",sep="")  
+
+   minihtml = paste("<html><body>",html_common_script_tag,html_div_tag,html_script_tag,"</body></html>",sep="")
   
    # return necessary things to create an html component
-   return(list(div_id=div_id, tsvcolfile=tsvcolfile, js_file=js_file, html_script_tag = html_script_tag, html_common_script_tag=html_common_script_tag, html_div_tag=html_div_tag))
+   return(list(div_id=div_id, tsvcolfile=tsvcolfile, js_file=js_file, html_script_tag = html_script_tag, html_common_script_tag=html_common_script_tag, html_div_tag=html_div_tag, minihtml=minihtml))
+
 
 }
 
