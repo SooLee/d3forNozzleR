@@ -43,7 +43,7 @@ create_d3_js_for_interactive_multiline_plot <- function(
    html_div_tag = paste("<div id=\"", div_id, "\"></div>",sep="")  
   
    # return necessary things to create an html component
-   return(list(div_id=div_id, tsvcolfile=tsvcolfile, js_file=js_file, html_script_tag = html_script_tag, html_common_script_tag=html_common_script_tag, html_div_tag=html_div_tag)
+   return(list(div_id=div_id, tsvcolfile=tsvcolfile, js_file=js_file, html_script_tag = html_script_tag, html_common_script_tag=html_common_script_tag, html_div_tag=html_div_tag))
 
 }
 
