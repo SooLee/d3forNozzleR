@@ -1,5 +1,6 @@
+## Author: Soo Lee (duplexa@gmail.com), Department of Biomedical Informatics, Harvard Medical School.
 create_d3_js_for_interactive_multiline_plot <- function(
-    sample_name = "mysample",
+    sample_name = "mysample", # Some kind of plot identification (in case you want to add multiple plots into a single html)
     xmin= 0,
     xmax= 1,
     ymin= 0,
