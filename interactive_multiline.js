@@ -142,4 +142,6 @@ function interactive_multiline_plot(tsvfile, tsvcolumns, xmin, xmax, ymin, ymax,
     plot_default();
 }
 
-
+function haha(){
+  d3.select('#d3div_tst3___').append('h3').text("haha");
+}
