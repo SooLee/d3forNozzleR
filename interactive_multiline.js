@@ -20,7 +20,6 @@
 //
 // Author: Soo Lee (duplexa@gmail.com), Department of Biomedical Informatics, Harvard Medical School.
 
-!function(){
 function interactive_multiline_plot(tsvfile, tsvcolumns, xmin, xmax, ymin, ymax, x_label, y_label, div_id){
     
     // canvas size. (data-independent)
@@ -147,4 +146,3 @@ function haha(div_id){
   d3.select('#' + div_id).append('h3').text("haha");
 }
 
-}();
